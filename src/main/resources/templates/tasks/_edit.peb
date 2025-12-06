@@ -13,7 +13,7 @@
            autofocus
            aria-describedby="hint-{{ task.id }}{% if error %} error-{{ task.id }}{% endif %}">
 
-    <small id="hint-{{ task.id }}">Keep it short and specific.</small>
+    <small id="hint-{{ task.id }}">Keep it short and specific (>= 3 characters).</small>
 
     {% if error %}
       <p id="error-{{ task.id }}" class="error" role="alert" aria-live="assertive">
