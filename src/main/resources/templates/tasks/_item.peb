@@ -1,4 +1,4 @@
-<li id="task-{{ task.id }}" class="task-view">
+<li id="task-{{ task.id }}" class="task-item task-view">
   <div class="task-content">
     <span class="task-title">{{ task.title }}</span>
   </div>
