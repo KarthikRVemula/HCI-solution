@@ -85,9 +85,10 @@ button.bt_delete {
     padding: 1rem;
     margin: 1rem 0;
     border-radius: 4px;
-    background: #e3f2fd;
-    border-left: 4px solid #4A90E2;
-    color: #0d47a1;
+    background: #dbeafe;
+    border-left: 4px solid #000;
+    color: #1d4ed8;
+    font-weight: 700;
 }
 
 #status:empty {
@@ -97,8 +98,9 @@ button.bt_delete {
 /* Error styling */
 #status.error {
   background: #ffebee;
-  border-left-color: #4A90E2;
+  border-left-color: #000;
   color: #c62828;
+  font-weight: 700;
 }
 
 [role="alert"] {
@@ -283,12 +285,14 @@ button.bt_delete {
     padding: 1rem;
     margin: 1rem 0;
     border-radius: 4px;
-    background: #e3f2fd;
-    border-left: 4px solid #4A90E2;
-    color: #0d47a1;
+    background: #dbeafe;
+    border-left: 4px solid #000;
+    color: #1d4ed8;
+    font-weight: 700;
 }
 
 #status:empty {
     display: none;
 }
+
 }
