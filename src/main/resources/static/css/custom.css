@@ -283,6 +283,12 @@ button.bt_delete {
   }
 
   #status {
-    display: none;
-  }
+  font-size: 2rem;        /* BIG */
+  font-weight: 800;
+  color: red;            /* RED */
+  background: #ffe5e5;
+  padding: 1rem;
+  text-align: center;
+  border-bottom: 4px solid red;
+}
 }
