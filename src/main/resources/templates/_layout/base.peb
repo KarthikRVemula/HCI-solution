@@ -56,7 +56,18 @@
     }
   </style>
 </head>
+<script>
+  document.body.addEventListener("htmx:afterSwap", function (e) {
+    if (e.detail.target.id === "status") {
+      const msg = e.detail.target.textContent.trim();
+      if (msg.length > 0) {
+        alert(msg);   // ✅ SAME TYPE OF POPUP AS hx-confirm
+      }
+    }
+  });
+</script>
 <body>
+  <div id="status" role="status" aria-live="polite"></div>
   {# Include header with navigation and accessibility features #}
   {% include "_layout/_header.peb" %}
   
@@ -66,9 +77,18 @@
     {% block content %}
     {# Page-specific content goes here #}
     {% endblock %}
-  </main>
-  
+  </main> 
   {# Include footer with helpful links and session info #}
   {% include "_layout/_footer.peb" %}
+  <script>
+    document.body.addEventListener("htmx:afterSwap", function (e) {
+      if (e.detail.target.id === "status") {
+        const msg = e.detail.target.textContent.trim();
+        if (msg.length > 0) {
+          alert(msg);   // ✅ SAME TYPE OF POPUP AS hx-confirm
+        }
+      }
+    });
+  </script>
 </body>
 </html>

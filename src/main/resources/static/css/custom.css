@@ -282,6 +282,10 @@ button.bt_delete {
     display: none;
   }
 
+  #status:empty {
+  display: none;
+  }
+
   #status {
     display: none;
   }
