@@ -31,12 +31,31 @@
   {% include "_layout/_footer.peb" %}
 
   <script>
-    window.onload = function () {
-      var status = document.getElementById("status");
-      if (status && status.textContent.trim() !== "") {
-        status.focus();
+    window.addEventListener('DOMContentLoaded', function () {
+      var status = document.getElementById('status);
+      if(status === null) {
+        return;
       }
-    };
+
+      function readStatus() {
+        var contents = status.textContent;
+        var correct = contents.trim();
+        if (correct !== "") {
+          status.focus();
+        }
+      }
+
+      readStatus();
+      var checkChange = new MutationObserver(function () {
+        readStatus();
+      });
+
+      checkChange.observe(status, {
+        childList: true,
+        subtree: true,
+        characterData: true
+    });
+  });
   </script>
 
 </body>
