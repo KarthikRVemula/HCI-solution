@@ -184,11 +184,6 @@ button.bt_delete {
   background-color: var(--pico-card-background-color, #f5f5f5);
 }
 
-.task-item:focus-within {
-  background-color: var(--pico-card-background-color, #f5f5f5);
-  border-color: var(--pico-primary, #4A90E2);
-}
-
 .task-item.completed {
   opacity: 0.7;
 }
