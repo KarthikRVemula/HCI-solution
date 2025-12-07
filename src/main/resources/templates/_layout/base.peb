@@ -12,17 +12,9 @@
 
   {# HTMX for progressive enhancement #}
   <script src="https://unpkg.com/htmx.org@1.9.12"></script>
-  
+ 
 </head>
 
-<script>
-  window.onload = finction () {
-    var status = document.getElementById("status");
-    if (status && status.textContent.trim() !== "") {
-      status.focus();
-    }
-  };
-</script>
 
 <body>
   {# Include header with navigation and accessibility features #}
@@ -37,5 +29,15 @@
   </main> 
   {# Include footer with helpful links and session info #}
   {% include "_layout/_footer.peb" %}
+
+  <script>
+    window.onload = function () {
+      var status = document.getElementById("status");
+      if (status && status.textContent.trim() !== "") {
+        status.focus();
+      }
+    };
+  </script>
+
 </body>
 </html>
