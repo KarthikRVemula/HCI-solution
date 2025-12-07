@@ -12,10 +12,7 @@
 
   {# HTMX for progressive enhancement #}
   <script src="https://unpkg.com/htmx.org@1.9.12"></script>
- 
 </head>
-
-
 <body>
   {# Include header with navigation and accessibility features #}
   {% include "_layout/_header.peb" %}
@@ -29,34 +26,5 @@
   </main> 
   {# Include footer with helpful links and session info #}
   {% include "_layout/_footer.peb" %}
-
-  <script>
-    window.addEventListener('DOMContentLoaded', function () {
-      var status = document.getElementById('status);
-      if(status === null) {
-        return;
-      }
-
-      function readStatus() {
-        var contents = status.textContent;
-        var correct = contents.trim();
-        if (correct !== "") {
-          status.focus();
-        }
-      }
-
-      readStatus();
-      var checkChange = new MutationObserver(function () {
-        readStatus();
-      });
-
-      checkChange.observe(status, {
-        childList: true,
-        subtree: true,
-        characterData: true
-    });
-  });
-  </script>
-
 </body>
 </html>
